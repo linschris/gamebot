@@ -32,7 +32,7 @@ export default class DatabaseClient {
       return
     }
      return await this.connect().catch(err => {
-      logger.bind(logger).error(err)
+      logger.error(err)
       this.initialize()
     })
   }
@@ -99,7 +99,7 @@ export default class DatabaseClient {
         unlockedGames: [],
         unlockedItems: [],
         created: Date.now(),
-        coins: 0,
+        goldBalance: 0,
         wins: [],
         achievements: [],
         quests: [],
